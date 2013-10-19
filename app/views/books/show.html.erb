@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Tittle:</strong>
+  <%= @book.tittle %>
+</p>
+
+<p>
+  <strong>Author:</strong>
+  <%= @book.author %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= @book.description %>
+</p>
+
+<p>
+  <strong>City:</strong>
+  <%= @book.city %>
+</p>
+
+<% if @book.picture %>
+<p>
+  <strong>Picture:</strong>
+  <img src="/uploads/picture_<%= @book.id %>" height='120' width='120'/>
+</p>
+<% end %>
+<p>
+  <strong>Barcode:</strong>
+  <%= @book.barcode %>
+</p>
+
+<%= link_to 'Edit', edit_book_path(@book) %> |
+<%= link_to 'Back', books_path %>
